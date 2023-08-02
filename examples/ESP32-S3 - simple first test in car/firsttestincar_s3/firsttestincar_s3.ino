@@ -28,17 +28,17 @@ uint16_t rpm;
 
 
 void setup() {
-  Serial.begin(115200);
-  Serial.setTxTimeoutMs(0); // prevent slow serial prints if no usb
-  pinMode(YELLOW_LED, OUTPUT);
-  pinMode(BLUE_LED, OUTPUT);
-  pinMode(CAN_RS, OUTPUT);    // INPUT (high impedance) = slope control mode, OUTPUT = see next line
-  digitalWrite(CAN_RS, LOW);  // LOW = high speed mode, HIGH = low power mode (listen only)
-  twai_general_config_t g_config = TWAI_GENERAL_CONFIG_DEFAULT((gpio_num_t)TX_PIN, (gpio_num_t)RX_PIN, TWAI_MODE_NORMAL);  // TWAI_MODE_NORMAL, TWAI_MODE_NO_ACK or TWAI_MODE_LISTEN_ONLY
-  twai_timing_config_t t_config  = TWAI_TIMING_CONFIG_500KBITS();
-  twai_filter_config_t f_config  = TWAI_FILTER_CONFIG_ACCEPT_ALL();
-  twai_driver_install(&g_config, &t_config, &f_config);
-  twai_start();
+Serial.begin(115200);
+Serial.setTxTimeoutMs(0); // prevent slow serial prints if no usb
+pinMode(YELLOW_LED, OUTPUT);
+pinMode(BLUE_LED, OUTPUT);
+pinMode(CAN_RS, OUTPUT);    // INPUT (high impedance) = slope control mode, OUTPUT = see next line
+digitalWrite(CAN_RS, LOW);  // LOW = high speed mode, HIGH = low power mode (listen only)
+twai_general_config_t g_config = TWAI_GENERAL_CONFIG_DEFAULT((gpio_num_t)TX_PIN, (gpio_num_t)RX_PIN, TWAI_MODE_NORMAL);  // TWAI_MODE_NORMAL, TWAI_MODE_NO_ACK or TWAI_MODE_LISTEN_ONLY
+twai_timing_config_t t_config  = TWAI_TIMING_CONFIG_500KBITS();
+twai_filter_config_t f_config  = TWAI_FILTER_CONFIG_ACCEPT_ALL();
+twai_driver_install(&g_config, &t_config, &f_config);
+twai_start();
 }
 
 
@@ -47,7 +47,7 @@ void loop() {
   CANrecv();
   Serial.print("rpm: ");
   Serial.println(rpm);
-  if( rpm > 2000 ) { digitalWrite(YELLOW_LED, HIGH); }
+  if( rpm > 1300 ) { digitalWrite(YELLOW_LED, HIGH); }
   else             { digitalWrite(YELLOW_LED, LOW);  }
   delay(200);
 }
@@ -66,7 +66,7 @@ int CANsend (void) {
   message.data[3] = 0;
   message.data[4] = 0;
   message.data[5] = 0;
-  message.data[6] = 0;
+  message.data[6] = 0;  
   message.data[7] = 0; 
   return twai_transmit(&message, 0); 
 }
