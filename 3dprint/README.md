@@ -11,26 +11,21 @@ Three housings done so far:
   
 <img src=https://user-images.githubusercontent.com/32169384/142175879-03e20653-0231-47e1-94f6-b4317e00aabb.jpg width=35% align=right>  
 
-- "Horizontal" with integrated OBD2 connector. This is especially for some cars where a wider casing will prevent you from plugging it into the cars jack if the jack is slightly recessed.  
+- Standard with integrated OBD2 connector. 
   
-- I've also made a version with a slot for a built in SD card reader. Good for logging locally within the unit instead of over Bluetooth/Wifi/USB. This one is identical in size.
 <br clear=all>
 <hr>
 
 <img src=https://user-images.githubusercontent.com/32169384/143077864-54e38de2-3b4a-4f49-bef5-e98d03e61bf6.jpg  width=35% align=right>  
 
-- "Vertical" with integrated OBD2 connector. Flatter, doesn't stick out as long from the jack as the "Horizontal" version but is wider so will not fit in all cars.  
+- Sandwich mounted board with integrated OBD2 connector. Flatter, doesn't stick out as long from the jack as the standard version but is wider so will not fit in all cars.  
   
-- I've also made a version of this one with a slot for a built in SD card reader. Good for logging locally within the unit instead of over Bluetooth/Wifi/USB. This one is slightly thicker.
 <br clear=all>
 <hr>
 
 
-# With an OBD2 connector
 
-Housing with an OBD2 connector so you can plug it in to the car directly.
-
-## "Horizontal"
+## Standard
   
 ![IMG_20230101_144314](https://user-images.githubusercontent.com/32169384/210176532-8d54fdb8-3f13-40ab-a625-1747000f7ba4.jpg)
   
@@ -42,7 +37,7 @@ M2 screws and inserts
 
 ![IMG_20221231_230941](https://user-images.githubusercontent.com/32169384/210156655-14b1d871-1d6b-48fd-9cf7-27f492be7083.jpg)
 
-## "Vertical"
+## Sandwich mounted board
  
 <img src=https://user-images.githubusercontent.com/32169384/143077864-54e38de2-3b4a-4f49-bef5-e98d03e61bf6.jpg>
 
@@ -58,3 +53,5 @@ M2 screws and inserts
 ![small-housing(3)](https://user-images.githubusercontent.com/32169384/138956928-8b44a92c-3336-4f66-8bfb-3b2ae9432360.jpg)
 
 ![small-housing(2)](https://user-images.githubusercontent.com/32169384/138956945-97b0403a-e5a8-471f-bc6c-01ba239a281d.jpg)
+
+![IMG_20230926_152918](https://github.com/MagnusThome/RejsaCAN-ESP32/assets/32169384/d7f06134-aefb-4829-9af6-b793f5d9f76e)
